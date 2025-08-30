@@ -1,5 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
+
 """
 Minimal RAG retrieval + rerank demo for I Ching dream motifs.
 - Loads CSV (hexagrams + motif_map)
@@ -108,7 +107,7 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--hex", default="iching_hexagrams_64.csv")
     ap.add_argument("--motif", default="iching_motifs_mapping.csv")
-    ap.add_argument("--query", required=True, help="dream snippet or motif, e.g., '长时间排队，焦躁但克制'")
+    ap.add_argument("--query", required=True, help="dream snippet or motif, e.g., 'Sorry please wait'")
     ap.add_argument("--valence", type=float, default=None, help="desired valence in [-1,1], e.g., -0.3")
     ap.add_argument("--topk", type=int, default=5)
     args = ap.parse_args()
